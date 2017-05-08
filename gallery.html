@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Art Of Graf | bpsociety</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Rock+Salt" rel="stylesheet">
+    <link rel="stylesheet" href="css/gallery.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+	<div class="wrapper clearfix">
+		<div class="wrapperLeft">
+			<header class="logoContainer">
+			  	<a href="index.html">
+			  		<img src="img/bp.png" alt="logo bp" class="logoImg img">
+			  	</a>
+			  	<span>Gallery</span>
+	  			<button type="button"><img src="img/about.png" alt="about bp" class="img"></button>
+			</header>
+			<div class="centeredTopImage">
+			  	<img src="img/gallery.png" alt="gallery" class="galleryImgTopMobile img">
+			</div>
+				<nav>
+					<ul class="lista clearfix">
+						<li class="soundContainer">
+							<img src="img/sound.png" alt="sound image" class="img soundImg">
+							<p>Play some music!</p>
+							<audio hidden>
+	     						<source src="music/22.mp3" type="audio/mpeg">
+	                			If you're reading this, audio isn't supported.
+	    					</audio>
+						</li>
+						<li class="mainContainer listaMobileVisible">
+							<a href="index.html" class="">
+								<img src="img/bp.png" alt="logo bp" class="logoImg img">
+								<p>Home</p>
+							</a>
+						</li>
+						<li class="kontaktContainer listaMobileVisible">
+							<a href="kontakt.html" class="">
+								<img src="img/kontakt.png" alt="kontakt image" class="kontaktImg listaImg img">
+								<p>Kontakt</p>
+							</a>
+						</li>
+						<li class="infoContainer listaMobileVisible">
+							<a href="info.html" class="">
+								<img src="img/info.png" alt="info image" class="img infoImg">
+								<p>info</p>
+							</a>
+						</li>
+					</ul>  <!--lista end-->
+				</nav> <!--nav end-->
+		</div> <!--wrapperLeft end-->
+		<ul class="gallery"></ul>
+		<div id="overlay">
+			<div class="overlayImgContainer">
+				<div class="overlayArrowLeftImgContainer">
+					<img src="img/arrow.png" alt="arrow to the left" class="img overlayArrowLeftImg">
+				</div>
+					<img src="img/gallery/gallery3.jpg" alt="image 1" class="img overlayImg">
+				<div class="overlayArrowRightImgContainer">
+					<img src="img/arrow.png" alt="arrow to the right" class="img overlayArrowRightImg">
+				</div>
+				<div class="overlayQuitImgContainer">
+					<img src="img/CloseButton.png" alt="close" class="img">
+				</div>
+			</div>
+		</div> <!--overlay end-->
+	</div> <!--wrapper end-->
+	<div class="loaderWrapper">
+				<div class="loader1 loading"></div>
+				<div class="loader2 loading"></div>
+	</div>
+  	<footer class="footer">
+  	<p>possible solutions &copy;</p>
+  	</footer>
+  	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  	<script src="js/loader.js" type="text/javascript" charset="utf-8"></script>
+  	<script src="js/mobile.js" type="text/javascript" charset="utf-8"></script>
+  	<script src="js/gallery.js" type="text/javascript" charset="utf-8"></script>
+  	<script src="js/scroller.js" type="text/javascript" charset="utf-8"></script>
+  	<script src="js/player.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

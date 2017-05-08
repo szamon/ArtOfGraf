@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Art Of Graf | bpsociety</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Rock+Salt" rel="stylesheet">
+    <link rel="stylesheet" href="css/kontakt.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+  	<div class="wrapper">
+  		<div class="wrapperLeft">
+  			<header class="logoContainer">
+  			  	<a href="index.html" class="">
+  			  		<img src="img/bp.png" alt="logo bp" class="logoImg img">
+  			  	</a>
+  			  	<span>Kontakt</span>
+  	  			<button type="submit"><img src="img/about.png" alt="about bp" class="img"></button>
+  			</header>
+  			<div class="centeredTopImage">
+  			  	<img src="img/kontakt.png" alt="gallery" class="galleryImgTopMobile img">
+  			</div>
+  			<nav>
+  				<ul class="lista clearfix">
+  					<li class="soundContainer">
+              <img src="img/sound.png" alt="sound image" class="img soundImg">
+  						<p>Play some music!</p>
+  						<audio hidden>
+  	 						<source src="music/22.mp3" type="audio/mpeg">
+  	            			If you're reading this, audio isn't supported.
+  						</audio>
+  					</li>
+  					<li class="mainContainer listaMobileVisible">
+  						<a href="index.html">
+  							<img src="img/bp.png" alt="logo bp" class="logoImg img">
+  							<p>Home</p>
+  						</a>
+  					</li>
+  					<li class="infoContainer listaMobileVisible">
+  						<a href="info.html">
+  							<img src="img/info.png" alt="info image" class="img infoImg">
+  							<p>info</p>
+  						</a>
+  					</li>
+  					<li class="galleryContainer listaMobileVisible">
+  						<a href="gallery.html">
+  							<img src="img/gallery.png" alt="gallery image" class="galleryImg img">
+  							<p>Gallery</p>
+  						</a>
+  					</li>\
+  				</ul>  <!--listaMobileVisible end-->
+  			</nav>
+  		</div> <!--wrapperLeft end-->
+  		<div class="formWrapper">
+  			<form action="php/contact.php" method="post">
+  		        <h1>Napisz do nas!</h1>
+  		        <div class="form">
+  			        <label for="name">Imię:</label>
+  			        <input type="text" id="name" name="user_name">
+  			        <label for="mail">Email:</label>
+  			        <input type="email" id="mail" name="user_email">
+  			        <label for="phone">Telefon:</label>
+  			        <input type="tel" id="phone" name="user_phone">
+  			        <label for="message">Wiadomość:</label>
+  			        <textarea id="message" name="user_message"></textarea>
+  		        </div>
+  		        	<input type="submit" value="Wyślij">
+  		    </form>
+  			<div class="formInfo clearfix">
+  				<figure>
+  				    <img src="img/gallery/gallery18.jpg" alt="aorta" class="kontaktMainImg">
+  				</figure>
+  				    <span>Email: konrad.konrad@wp.pl</span>
+  			</div> <!--formInfo end-->
+  		    <div class="social">
+  		     	<a href="https://facebook.com" class="">
+  				    <img src="img/facebook.png" alt="facebook profile">
+  				</a>
+  				<a href="https://twitter.com" class="">
+  				    <img src="img/twitter.png" alt="twitter profile">
+  				</a>
+  		    </div><!--social end-->
+  		</div> <!--infoWrapper end-->
+  	</div> <!--wrapper end-->
+  	<div class="loaderWrapper">
+  		<div class="loader1 loading"></div>
+  		<div class="loader2 loading"></div>
+  	</div>
+  	<footer class="footer">
+  		<p>szymski solutions &trade;</p>
+  	</footer>
+  	<script src="js/loader.js" type="text/javascript" charset="utf-8"></script>
+  	<script src="js/mobile.js" type="text/javascript" charset="utf-8"></script>
+  	<script src="js/scroller.js" type="text/javascript" charset="utf-8"></script>
+  	<script src="js/player.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
