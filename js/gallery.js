@@ -69,6 +69,7 @@ var gallery = {
 		var leftArrow = document.querySelector('.overlayArrowLeftImgContainer');
 		var rightArrow = document.querySelector('.overlayArrowRightImgContainer');
 		var quit = document.querySelector('.overlayQuitImgContainer');
+		var quit1 = document.querySelector('#overlay');
 		var image = document.querySelector('.overlayImgContainer');
 
 		leftArrow.onclick = function(){
@@ -94,7 +95,12 @@ var gallery = {
 		};
 
 		quit.onclick = function(){
-			console.log('im woriking!');
+			console.log('im working!');
+			document.querySelector('#overlay').style.display = "none";
+		};
+
+		quit1.onclick = function(){
+			console.log('im working!');
 			document.querySelector('#overlay').style.display = "none";
 		};
 
