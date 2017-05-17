@@ -15,7 +15,13 @@ var pictures = [
 	]
 
 var gallery = {
+	indexOfPic: 0,
 	pictures: pictures,
+	mediaWidth: 884,
+
+	printer: function(object, text){
+		object.innerHTML = text;
+	},
 
 	fillHTML: function(){
 		this.pathHtmlfill(".gallery");
@@ -33,13 +39,12 @@ var gallery = {
 		gallery.printer(classElement, HTML);
 	},
 
-	indexOfPic: 0,
-
 	overlayCreate: function(){
 		var anchors = document.querySelectorAll('.gallery a');
 		anchors.forEach(function(item, index){
 			item.onclick = function(event){
 				event.preventDefault();
+				if($(window).width()>=gallery.mediaWidth){
 				var overlayContent = '<div class="overlayArrowLeftImgContainer">';
 				overlayContent += '<img src="img/arrow.png" alt="arrow to the left" class="img overlayArrowLeftImg">';
 				overlayContent += '</div>';
@@ -55,6 +60,7 @@ var gallery = {
 				gallery.indexOfPic = index;
 				gallery.overlayNav();
 				gallery.overlayShow();
+				};
 			};
 		});
 	},
@@ -93,9 +99,6 @@ var gallery = {
 		};
 
 	},
-	printer: function(object, text){
-		object.innerHTML = text;
-	},
 
 	overlayShow: function(){
 		var element = [document.querySelector(".overlayArrowLeftImgContainer"), document.querySelector(".overlayArrowRightImgContainer"), document.querySelector(".overlayQuitImgContainer")]; 
@@ -113,12 +116,7 @@ var gallery = {
 				};
 			};
 		};
-		
-			
-
 	},
-
-	
 }
 
 gallery.fillHTML();
