@@ -100,7 +100,7 @@ function init() {
 }
 
 window.onload = init();
-window.onload = player();
-window.onload = menu();
-window.onload = loadingScreen();
-window.onload = menuBig();
+player();
+menu();
+loadingScreen();
+menuBig();
