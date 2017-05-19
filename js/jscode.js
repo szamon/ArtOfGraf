@@ -44,6 +44,10 @@ var loadingScreen = function(){
 	document.onreadystatechange = function(){
 	if (document.readyState === "complete"){
 		document.querySelector('.loaderWrapper').classList.add('loaderWrapperHide');
+		document.querySelector('.mainBackground').style.display="block";
+		document.querySelector('.mainBackgroundBig').style.display="block";
+		document.querySelector('.wrapper').style.display="block";
+		document.querySelector('footer').style.display="block";
 	}};
 }
 
@@ -87,14 +91,14 @@ function init() {
         if (distanceY > shrinkOn) {
             lista.classList.add('listaScroll');
                 if(distanceY>shrinkOn2){
-                     element1.style.visibility = 'hidden'; 
+                     element1.style.visibility = 'hidden';
                  }else{element1.style.visibility = 'visible';}
-          
+
         } else {
-            
+
                 lista.classList.remove("listaScroll");
-                
-            
+
+
         }
     });
 }

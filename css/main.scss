@@ -203,6 +203,7 @@ a{
 }
 
 .footer{
+	display: none;
 	font-family: 'Bangers', cursive;
 	line-height: 24px;
 	width: 100%;
@@ -230,6 +231,7 @@ a{
 /***GLOBAL***/
 
 .wrapper{
+	display: none;
 	height: calc(100vh - 24px);
 	position: initial;
 }
@@ -483,7 +485,8 @@ a{
   }
 }
 
-@mixin mainB($gradientStart,$gradientEnd, $height){
+@mixin mainB($gradientStart, $gradientEnd, $height){
+	display: none;
   position: fixed;
 	top: 0;
 	bottom: 0;
