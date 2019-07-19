@@ -70,10 +70,11 @@ var gallery = {
 		var rightArrow = document.querySelector('.overlayArrowRightImgContainer');
 		var quit = document.querySelector('.overlayQuitImgContainer');
 		var quit1 = document.querySelector('#overlay');
+		var quit2 = document.querySelector('.outerOverlay');
 		var image = document.querySelector('.overlayImgContainer');
 
 		leftArrow.onclick = function(){
-			console.log('im woriking!');
+			console.log('left arrow log');
 			if(gallery.indexOfPic > 0){
 				gallery.indexOfPic -= 1;
 			}
@@ -84,7 +85,7 @@ var gallery = {
 		};
 
 		rightArrow.onclick = function(){
-			console.log('im woriking!');
+			console.log('right arrow log!');
 			if(gallery.indexOfPic < gallery.pictures.length - 1){
 				gallery.indexOfPic += 1;
 			}
@@ -95,14 +96,14 @@ var gallery = {
 		};
 
 		quit.onclick = function(){
-			console.log('im working!');
-			document.querySelector('#overlay').style.display = "none";
+			console.log('quit x log');
+			quit1.style.display = "none";
 		};
 
-		quit1.onclick = function(){
-			console.log('im working!');
-			document.querySelector('#overlay').style.display = "none";
-		};
+		// quit1.onclick = function(){
+		// 	console.log('overlay quit');
+		// 	quit1.style.display = "none";
+		// };
 
 	},
 

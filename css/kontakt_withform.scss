@@ -7,7 +7,6 @@ $font-stack-text: "Cormorant Garamond", cursive;
 }
 
 .wrapper{
-  height: calc(100vh - 24px);
   text-align: center;
   text-align: -moz-center;
   text-align: -webkit-center;
@@ -130,14 +129,78 @@ a{
   //font-style: italic;
   color: white;
 
+  input,
+  textarea,
+  label,
+  img,
+  span{
+    display: block;
+    margin: 0 auto;
+  }
+
   h1{
     margin: 0 auto 25px auto;
-    padding-top: 200px;
+    padding-top: 140px;
     font-size: 1.2em;
   }
 
+  label{
+    font-size: 1.1em;
+    font-style: italic;
+    line-height: 30px;
+    width: 55%;
+    border-bottom: 1px solid white;
+  }
+
   span{
-    font-size: 1em;
+    margin-top: 35px;
+    font-size: 0.7em;
+  }
+
+  input{
+    text-align: center;
+    font-family: $font-stack-text;
+    font-size: 1.1em;
+    line-height: 17px;
+    margin-top: 1px;
+    margin-bottom: 15px;
+    width: 55%;
+    background: rgba(256, 256, 256, 0.4);
+    border: none;
+    border-radius: 0 0 5px 1px;
+    color: white;
+  }
+
+  textarea{
+    text-align: center;
+    font-family: $font-stack-text;
+    font-size: 1.1em;
+    margin-top: 1px;
+    height: 60px;
+    width: 195px;
+    padding-top: 3px;
+    width: 55%;
+    -webkit-box-shadow: inset -1px -1px 0 0;
+            box-shadow: inset -1px -1px 0 0;
+    background: rgba(256, 256, 256, 0.4);
+    border: none;
+    border-radius: 0 0 5px 1px;
+    color: white;
+  }
+
+  input[type="submit"]{
+    background: rgba(221, 221, 221, 0.6);
+    color: white;
+    border-color: white;
+    border-radius: 5px;
+    -webkit-box-shadow: inset -1px -1px 0 0;
+            box-shadow: inset -1px -1px 0 0;
+    height: 25px;
+    width: 55px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-family: $font-stack-text;
+    font-size: 0.7em;
     font-style: italic;
   }
 
@@ -147,7 +210,7 @@ a{
 }
 
 .kontaktMainImg{
-  margin-top: 30px;
+  margin-top: 20px;
   max-height: 150px;
   border: 1px solid rgba(256, 256, 256, 0.4);
   padding: 2px;
@@ -347,7 +410,7 @@ a{
     float: right;
     margin-left: 4px;
   }
-}
+  }
 
 
 .kontaktContainer{
@@ -458,19 +521,16 @@ a{
   .formInfo{
     background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, rgba(0, 0, 0, 0.5)), to(transparent));
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.5) 50%, transparent);
-    margin: 0 auto;
-    width: 50%;
 
     figure, span{
       display: inline-block;
       float: left;
-      width: 50%;
+      width: 25%;
       margin: 0;
     }
 
-    
-    .kontaktMainImg{
-      margin-top: 0;
+    figure{
+      margin-left: 25%;
     }
 
     span{

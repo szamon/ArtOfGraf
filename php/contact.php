@@ -1,36 +1,20 @@
-<?php
-$form_name = $_POST["user_name"];
-$form_email = $_POST["user_email"];
-$form_phone = $_POST["user_phone"];
-$form_message = $_POST["user_message"];
+<?php 
+if(isset($_POST['submit'])){
+    $to = "szamon@wp.pl"; // this is your Email address
+    $from = $_POST['user_email']; // this is the sender's Email address
+    $first_name = $_POST['user_name'];
+    $last_name = $_POST['user_phone'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['user_message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['user_message'];
 
-$mailTo =  "szamon@wp.pl";
-$subject = "Wiadomość od wizytatora" .$form_name;
-
-$body_message = "Od: " .$form_name."\n";
-$body_message .= "em@il:  " .$form_email."\n";
-$body_message .= "Telefon:  " .$form_phone."\n";
-$body_message .= "Wiadomość:  " .$form_message;
-
-$headers = "Od: ".$form_email."\r\n";
-$headers .= "Odpisz do: ".$form_email."\r\n";
-
-$mail_status = mail($mailTo, $subject, $body_message, $headers);
-
-if ($mail_status) { ?>
-    <script language="javascript" type="text/javascript">
-        // Print a message
-        alert('Thank you for the message. We will contact you shortly.');
-        // Redirect to some page of the site. You can also specify full URL, e.g. http://template-help.com
-        window.location = '../kontakt.html';
-    </script>
-<?php
-}else { ?>
-    <script language="javascript" type="text/javascript">
-        // Print a message
-        alert('Message failed. Please, send an email to szamon@wp.pl');
-        // Redirect to some page of the site. You can also specify full URL, e.g. http://template-help.com
-        window.location = '../kontakt.html';
-    </script>
-<?php
-}?>
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    // You cannot use header and echo together. It's one or the other.
+    }
+?>
