@@ -133,6 +133,7 @@ a {
 
 .infoWrapper ul {
   list-style: none;
+  margin: 0 auto;
 }
 
 .infoWrapper p {
@@ -394,8 +395,8 @@ a {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     position: relative;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, black), to(rgba(0, 0, 0, 0.2)));
     background: linear-gradient(black 20%, rgba(0, 0, 0, 0.2));
